@@ -64,8 +64,8 @@ timer2 = timeit.Timer(
 times1 = timer1.repeat(repeat=1000, number=1)
 times2 = timer2.repeat(repeat=1000, number=1)
 
-plt.hist(times1, bins=30, alpha=0.6, label="S → S+1")
-plt.hist(times2, bins=30, alpha=0.6, label="S-1 → S")
+plt.hist(times1, bins=30, alpha=0.6, label="S -> S+1")
+plt.hist(times2, bins=30, alpha=0.6, label="S-1 -> S")
 
 plt.xlabel("Time per append (seconds)")
 plt.ylabel("Frequency")
