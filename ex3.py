@@ -13,11 +13,10 @@ import matplotlib.pyplot as plt
 # the comment above the formula tells us that the over-allocation prevents Python from having to resize on every append
 
 # growth factor:
-# new capacity = old capacity × (growth factor)
 # new_allocated = newsize + (newsize >> 3) + 6
 # newsize >> 3 is shift right by 3 bits, which is the same newsize/8 -> 1/8 of newsize
-# so newsize/8 is added as extra space
-# this is then the growth factor (1/8 = 12.5%)
+# so newsize/8 is added as extra space on every append
+# so then the growth factor is (1/8 = 12.5%)
 
 # 2:
 mylist = []
