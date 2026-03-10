@@ -60,11 +60,9 @@ plt.ylabel("Frequency")
 plt.title(f"Linear Search O(n)")
 
 plt.subplot(1, 2, 2)
-plt.hist(times_binary, bins=30, alpha=0.8)
+plt.hist(times_binary, bins=30, color="red", alpha=0.8)
 plt.xlabel("Time (µs)")
 plt.ylabel("Frequency")
 plt.title(f"Binary Search O(log n)")
 
-plt.tight_layout()
-plt.savefig("ex4.2_plot.png", dpi=150)
 plt.show()
