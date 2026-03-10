@@ -74,3 +74,8 @@ plt.legend()
 plt.xlim(0, 0.000009) # change x axis to better fit data
 plt.show()
 
+# 5 : Differences in plots
+# Both cases are fast most of the time, so the histograms look pretty similar.
+# The key difference is that S→S+1 has a few rare slow outliers
+# Those are the moments when Python realizes the list is full and has to allocate new memory.
+# S−1→S has no such outliers because the list always has one spare slot ready, so it just drops the element in 
