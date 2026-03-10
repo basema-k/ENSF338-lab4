@@ -53,19 +53,17 @@ times_binary = [t * 1e6 for t in timer_binary.repeat(repeat=MEASUREMENTS, number
 print(f"Linear search — average: {sum(times_linear)/len(times_linear):.2f} µs")
 print(f"Binary search — average: {sum(times_binary)/len(times_binary):.2f} µs")
 
-plt.figure(figsize=(9, 4))
-
 plt.subplot(1, 2, 1)
-plt.hist(times_linear, bins=30, color="tomato", alpha=0.8)
+plt.hist(times_linear, bins=30, alpha=0.8)
 plt.xlabel("Time (µs)")
 plt.ylabel("Frequency")
-plt.title(f"Linear Search O(n)\nn={N}, {MEASUREMENTS} measurements")
+plt.title(f"Linear Search O(n)")
 
 plt.subplot(1, 2, 2)
-plt.hist(times_binary, bins=30, color="steelblue", alpha=0.8)
+plt.hist(times_binary, bins=30, alpha=0.8)
 plt.xlabel("Time (µs)")
 plt.ylabel("Frequency")
-plt.title(f"Binary Search O(log n)\nn={N}, {MEASUREMENTS} measurements")
+plt.title(f"Binary Search O(log n)")
 
 plt.tight_layout()
 plt.savefig("ex4.2_plot.png", dpi=150)
