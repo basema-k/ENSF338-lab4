@@ -30,7 +30,7 @@ for n in range(64):
         print("Capcity changed: ", new_size, "bytes")
         prev_size = new_size
 
-# 3:
+# 3: Case 1: Append to a list of 1000 elements
 S = 1000
 slist = list(range(S))
 
@@ -40,7 +40,7 @@ t1 = timeit.timeit(
     number = 1000)
 print("Average time (S -> S+1):", t1/1000)
 
-# 4:
+# 4: Append to a list of 999 elements
 t2 = timeit.timeit(
     stmt="slist.append(0)",
     setup="S=1000; slist = list(range(S-1))",
@@ -71,11 +71,11 @@ plt.xlabel("Time per append (seconds)")
 plt.ylabel("Frequency")
 plt.title("Distribution of Append Times")
 plt.legend()
-plt.xlim(0, 0.000009) # change x axis to better fit data
+plt.xlim(0, 0.00002) # change x axis to better fit data
 plt.show()
 
 # 5 : Differences in plots
-# Both cases are fast most of the time, so the histograms look pretty similar.
-# The key difference is that S->S+1 has a few rare slow outliers
-# Those are the moments when Python realizes the list is full and has to allocate new memory.
-# S−1->S has no such outliers because the list always has one spare slot ready, so it just drops the element in 
+# Both cases are fast most of the time
+# The key difference is that S->S+1 is notably slower
+# This is because Python realizes the list is full and has to allocate new memory
+# S−1->S has no such outliers because the list always has one spare slot ready
