@@ -140,7 +140,6 @@ if __name__ == "__main__":
     run_test()
 
 """
-The complexity of binary search on a linked list is O(n).
 
 Binary search requires accessing the middle element repeatedly.
 In an array this is O(1), but in a linked list we must traverse
