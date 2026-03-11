@@ -20,7 +20,7 @@ runs. This is best when you want to compare two implementations and need to unde
 
 **For timeit.timeit() : use the average**
 
-It returns one total time for N runs. You divide by N which is already an average. That's the whole point of running it many times.
+It returns one total time for N runs. You divide by N which gives average. That's the whole point of running it many times.
 
 **For timeit.repeat() : use the min**
 

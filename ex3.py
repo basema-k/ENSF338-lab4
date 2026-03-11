@@ -40,7 +40,7 @@ t1 = timeit.timeit(
     number = 1000)
 print("Average time (S -> S+1):", t1/1000)
 
-# 4: Append to a list of 999 elements
+# 4:Case 2: Append to a list of 999 elements
 t2 = timeit.timeit(
     stmt="slist.append(0)",
     setup="S=1000; slist = list(range(S-1))",
@@ -76,6 +76,7 @@ plt.show()
 
 # 5 : Differences in plots
 # Both cases are fast most of the time
-# The key difference is that S->S+1 is notably slower
-# This is because Python realizes the list is full and has to allocate new memory
-# S−1->S has no such outliers because the list always has one spare slot ready
+# The key difference is that S->S+1 is slower
+# In the S−1->S case, the list typically still has unused
+# allocated space, so the append usually does not require resizing.
+# Therefore we do not see the same slow outliers.
