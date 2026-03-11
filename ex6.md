@@ -31,10 +31,9 @@ With an array there is no need to shift elements and therefore there is a lower 
 
 3. Feasibility of sorting algorithms on a doubly linked list
 
-Insertion sort: Works well on linked lists because nodes can easily be inserted in the correct position without shifting elements; only pointer updates are needed.
+Insertion sort: This algorithm is feasible for a doubly linked list because nodes can be inserted in the correct position by updating the previous and next pointers. No shifting of elements is required.
 
-
-Merge sort: is also suitable for linked lists because it divides the list and merges sorted lists efficiently; it can be done by adjusting pointers without extra memory.
+Merge sort: This algorithm is also feasible for a doubly linked list because the list can be divided into smaller lists and then merged by adjusting pointers between nodes instead of moving elements.
 
 4. Complexity comparison
 
